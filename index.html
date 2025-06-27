@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel RPG Character Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pixel-container">
+        <header>
+            <h1>⚔️ Pixel RPG<br>Character Generator</h1>
+            <nav class="main-menu">
+                <button id="generateBtn"><span>🎲</span> New</button>
+                <button id="downloadBtn"><span>⬇️</span> SVG</button>
+                <button id="showCodeBtn"><span>📝</span> SVG Code</button>
+                <button id="copyBtn"><span>📋</span> Copy</button>
+                <button id="multiBtn"><span>🖼️</span> Gallery</button>
+                <button id="spritesheetBtn"><span>🧩</span> Sprite Sheet</button>
+                <button id="settingsBtn" class="settings"><span>⚙️</span> Settings</button>
+                <button id="aboutBtn" class="about"><span>❔</span> About</button>
+            </nav>
+        </header>
+        <main>
+            <section id="gamebox">
+                <div id="svgContainer"></div>
+                <div id="statsContainer"></div>
+            </section>
+            <pre id="codeBox" style="display:none;"></pre>
+            <section id="multiGrid" style="display:none"></section>
+            <section id="sheetBox" style="display:none"></section>
+            <div id="toast" style="display:none;">Copied!</div>
+            <div id="settingsPanel" style="display:none;">
+                <div class="settings-content">
+                    <h2><span>⚙️</span> Settings</h2>
+                    <label>
+                        Character size:<br>
+                        <input type="range" id="charScale" min="1" max="4" step="1" value="1">
+                        <span id="scaleValue">1x</span>
+                    </label>
+                    <label>
+                        Background theme:<br>
+                        <select id="themeSelect">
+                            <option value="fantasy">Fantasy</option>
+                            <option value="dark">Dark</option>
+                            <option value="light">Light</option>
+                        </select>
+                    </label>
+                    <label>
+                        Character seed:<br>
+                        <input type="number" id="seedInput" placeholder="Random (empty)">
+                    </label>
+                    <label>
+                        <input type="checkbox" id="showFrame" checked>
+                        Show golden frame
+                    </label>
+                    <label>
+                        <input type="checkbox" id="autoDownload">
+                        Auto-download on new
+                    </label>
+                    <label>
+                        <input type="checkbox" id="showNames" checked>
+                        Show names in gallery
+                    </label>
+                    <div class="settings-buttons">
+                        <button id="applySettingsBtn"><span>✅</span> Save</button>
+                        <button id="resetSettingsBtn"><span>♻️</span> Reset</button>
+                        <button id="closeSettingsBtn"><span>✖️</span> Close</button>
+                    </div>
+                </div>
+            </div>
+            <div id="aboutPanel" style="display:none;">
+                <div class="about-content">
+                    <h2>❔ About</h2>
+                    <p>
+                        <b>Pixel RPG Character Generator</b> lets you create random, unique pixel RPG characters as SVGs.<br>
+                        Features:
+                        <ul>
+                            <li>Random pixel-art characters</li>
+                            <li>Download SVG, view/copy code</li>
+                            <li>Animated gallery & sprite sheet export</li>
+                            <li>Customization: size, theme, seed, frame, auto-download, show/hide names</li>
+                            <li>Mobile responsive</li>
+                        </ul>
+                        Made by <a href="https://github.com/Jacob22092" target="_blank" rel="noopener">Jacob22092</a><br>
+                        <button id="closeAboutBtn"><span>✖️</span> Close</button>
+                    </p>
+                </div>
+            </div>
+            <div class="statusbar" id="statusbar"></div>
+        </main>
+    </div>
+    <footer>
+        <div class="footerbar">
+            <span>Pixel RPG Character Generator © 2025</span>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
