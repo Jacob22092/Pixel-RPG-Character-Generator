@@ -3,6 +3,8 @@
 A pixel-art RPG character generator for the web. Instantly create unique, random fantasy heroes in SVG format—perfect for prototypes, avatars, or just for fun!  
 Fully responsive, mobile-friendly, and rich in RPG flavor.
 
+![Pixel RPG Character Generator Screenshot](https://i.imgur.com/RS2tyIt.png)
+
 ## Features
 
 - **Random pixel-art fantasy characters** (race, class, equipment, colors, etc.)
